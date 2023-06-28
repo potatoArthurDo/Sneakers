@@ -1,0 +1,483 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+}
+
+h2 {
+    font-size: 46px;
+    line-height: 54px;
+}
+p {
+    font-size: 20px;
+    line-height: 30px;
+    color: maroon;
+}
+
+h5 {
+    font-size: 23px;
+    line-height: 25px;
+}
+
+h4 {
+    font-size: 29px;
+    line-height: 28px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background-color:#e6e4e1 ;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.Logo {
+    text-decoration: none;
+    font-size: 35px;
+    text-transform: bold;
+    font-weight: 800;
+    color: maroon;
+
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav li{
+    list-style: none;
+    padding: 0 20px;
+}
+
+.nav li a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+    transition: 0.3s ease;
+}
+
+nav li button {
+    background-color: white;
+    padding: 10px 20px;
+    outline: none;
+    border-radius: 20px;
+    transform: 0.3 ease;
+}
+
+.nav li button:hover {
+    background-color: maroon;
+    color: white;
+
+}
+.nav li a:hover {
+    color: maroon;
+}
+
+.main_screen {
+    background-image: url(images/STRAYE-collection-banner-logan_1600x.webp);
+    height: 80vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 25% right 0;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-self: center;
+}
+
+.main_screen h2 {
+    padding-bottom: 15px;
+    color: maroon;
+}
+ .main_screen h1 {
+    color: black;
+ }
+
+ .main_screen button {
+    background-color: maroon;
+    border: none;
+    color: white;
+    margin-top: 20px;
+    padding: 14px 80px 14px 65px;
+    font-size: large;
+    font-weight: 700;
+    border-radius: 25px;
+    transform: 0.3 ease;
+ }
+
+ .main_screen button:hover {
+    background-color: white;
+    color: maroon;
+ }
+
+ .product {
+    text-align: center;
+ }
+
+ .product .all_pro {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+ }
+ .product .pro_container {
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid gray;
+    border-radius: 25px;
+    margin: 15px 0;
+    position: relative;
+    
+ }
+
+.product h1 {
+    color: maroon;
+}
+
+ .product .pro_container img {
+    width: 100%;
+    border-radius: 15px;
+ }
+
+
+ .product .pro_container .des {
+    text-align: start;
+    padding: 10px 0;
+ }
+
+ .product .pro_container .des span {
+
+    font-size: 15px;
+ }
+
+ .product .pro_container .des h5 {
+    padding-top: px;
+    font-size: 20px;
+    color: gray;
+ }
+
+ .product .pro_container .des h4 {
+    padding-top: px;
+    font-size: 20px;
+    color: maroon;
+ }
+
+ .product .pro_container .add {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    font-weight: 50px;
+    border: 1 px solid gray;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+    transform: 0.3 ease;
+ }
+
+ .product .pro_container .add:hover{
+   background-color: red;
+   opacity: 0.5;
+ }
+
+ .banner {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   background-image: url(images/domino-164_6wVEHfI-unsplash.jpg);
+   color:white;
+   width: 100%;
+   height: 40vh;
+   background-size: cover;
+   background-position: center;
+   text-shadow: 0 0 15px black, 0 0 5px green;
+ }
+
+ .banner span {
+   font-weight: 700;
+   text-shadow: 0 0 5px white;
+ }
+
+ .banner button {
+   font-weight: 600;
+   padding: 15px 30px;
+   color: maroon;
+   background-color: white;
+   border-radius: 20px;
+   border: none;
+   font-size: 15px;
+   transform: 0.3s ease;
+ }
+
+ .banner button:hover {
+   background-color: red;
+   color: white;
+ }
+ footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+
+ }
+
+ footer  .col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+ }
+
+ footer .Logo {
+    margin-top: 30px;
+    margin-bottom: 30px;
+ }
+
+ footer h4{
+    
+    padding-bottom: 20px;
+ }
+
+ footer p{
+    
+    text-decoration: none;
+    color: gray;
+    padding-bottom: 0 0 8px 0;
+ }
+
+ footer a {
+    text-decoration: none;
+    color: gray;
+    margin-bottom: 10px;
+ }
+
+#login_box {width:30%; margin:50px auto; padding:5px 10px;
+			 font-size:13px; color:maroon;}
+
+#login_title {font-size:24px; margin:20px 0px; font-weight: 600;}
+
+#login_form a {  text-decoration:none;font-size: 16px;}
+.form_group {border-radius:5px; border:1px #CCCCCC solid; padding:10px 20px}
+.form_group legend { font-size: 18px; font-weight: 500;color: black;}
+.form_group p { font-size: 16px; font-weight: 200;}
+
+.input_box {width:100%;height:30px;
+			border:1px #CCCCCC solid; margin:20px 0px;
+			display: flex;flex-direction: row;align-items: center;}
+.input_box i {  margin:0px 10px}
+.input_item { width:100%; border:none;}
+.input_item:focus {outline:none}
+
+.check_box {width:100%; margin:20px 0px; font-size:16px;
+			display: flex;flex-direction: row;align-items: center;}
+input[type=checkbox] {width:30px; height:30px; margin-right:10px}
+
+.button_item{ text-align:right; font-size: 16px;}
+.button_item button{ height:30px; color:white; background-color: maroon; 
+					border:none; border-radius:5px; padding:6px 12px}
+.button_item button:disabled {background:#CCC}
+.back {
+    color: blue;
+    text-decoration: bold;
+}
+
+.header_banner {
+   background-image: url(images/e61650efc5d6acff4c558aab0830d07a.jpg);
+    height: 70vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 25% right 0;
+    display: flex;
+    justify-items: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 14px;
+}
+
+.header_banner h2 {
+   color: white;
+   text-shadow: 0 0 15px black;
+}
+
+.header_banner h4 {
+   color: maroon;
+   opacity: 0.8;
+   font-weight: 700;
+   text-shadow: 0 0 15px white;
+}
+
+.block {
+   background-color: maroon;
+   width: 100%;
+   height: 3vh;
+   opacity: 0.8;
+}
+
+.p_detail {
+   display: flex;
+   margin-top:20px ;
+}
+.p_detail .p_image {
+   width: 40%;
+   margin-right: 50px;
+}
+
+.p_detail .single_p_detail {
+   width: 30%;
+   padding-top: 30px;
+}
+
+.p_detail .single_p_detail h4 {
+   padding: 40px 0 20px 0;
+}
+.p_detail .single_p_detail h2 {
+   font-size: 26px;
+}
+
+.p_detail .single_p_detail select {
+   display: block;
+   padding: 5px 10 px;
+   margin-bottom: 10px;
+}
+
+.p_detail .single_p_detail input {
+   width: 50px;
+   height: 47px;
+   padding-left: 10px;
+   font-size: 16px;
+   margin-right: 10px;
+   text-align: center;
+}
+
+.p_detail .single_p_detail button {
+   background:maroon;
+   color: white;
+   border: none;
+   font-size: 15px;
+   width: 100px;
+   height: 40px;
+}
+.p_detail .single_p_detail span {
+   line-height: 15px;
+}
+.similar h2 {
+   text-align: center;
+   display: flex;
+   justify-items: center;
+   padding: 14px;
+}
+
+.cart {
+   padding-top: 30px;
+}
+.cart table{
+   width: 100%;
+   border-collapse: collapse;
+   table-layout: fixed;
+   white-space: nowrap;
+}
+
+.cart table img {
+   width: 70px;
+}
+
+.cart table td:nth-child(1) {
+   width: 100px;
+   text-align: center;
+}
+.cart table td:nth-child(2) {
+   width: 150px;
+   text-align: center;
+}
+.cart table td:nth-child(3) {
+   width: 250px;
+   text-align: center;
+}
+.cart table td:nth-child(4),
+.cart table td:nth-child(5),
+.cart table td:nth-child(6) {
+   width: 150px;
+   text-align: center;
+}
+
+.cart table td:nth-child(5) input {
+   width: 70px;
+   padding: 10px 5px 10px 15px;
+}
+
+.cart table thead {
+   border: 1px solid lightgray;
+   border-left: none;
+   border-right: none;
+}
+
+.cart table thead td {
+   font-weight: 700;
+   text-transform: uppercase;
+   font-size:13px ;
+   padding: 18px 0;
+}
+
+.cart table tbody tr td {
+   padding-top: 15px;
+}
+
+.cart table tbody td {
+   font-size: 13px;
+}
+
+.cart_total {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+
+.cart_total h3 {
+   padding-bottom: 15px;
+}
+
+.subtotal {
+   margin-top: 30px;
+   width: 50%;
+   margin-bottom:  30px;
+   border: 1px solid lightgray;
+   padding: 30px
+}
+
+.subtotal table {
+   border-collapse: collapse;
+   width: 100%;
+   margin-bottom: 20px;
+}
+
+.subtotal table td {
+   width: 50%;
+   border: 1px solid lightgray;
+   padding: 30px;
+   font-size: 15px;
+}
+
+.subtotal .checkout {
+   border: none;
+   background: maroon;
+   color: white;
+   font-size: 15px;
+   font-weight: 700;
+   padding: 20px 10px 20px 10px;
+   border-radius: 20px;
+}
