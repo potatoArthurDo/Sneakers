@@ -59,6 +59,11 @@
                     <input type="password" id="re_password" class="input_item" placeholder="Re-Password" onkeyup="CheckRePass()">
                 </div>
                 <div id="ErorrRePass"></div>
+
+                <p>Choose your avatar:</p>
+                <div class="input_box">
+                    <input type="file" name="image" id="image" placeholder="Choose Avatar" action="imageModify.php">
+                </div>
                 
                 <div class="check_box">
                 	<input type="checkbox" id="agree" value="1" onclick="CheckBox();">

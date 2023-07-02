@@ -10,8 +10,9 @@ $email = $_REQUEST["email"];
 $phone = $_REQUEST["phone"];
 $gender = $_REQUEST["rGender"];
 $address = $_REQUEST["address"];
+$image = $_REQUEST["image"];
 
-$ketqua = AddUser($full_name, $password, $dob, $email, $phone, $gender, $address) ;
+$ketqua = AddUser($full_name, $password, $dob, $email, $phone, $gender, $address, $image) ;
 if($ketqua == TRUE) 
     echo "<h3> THÀNH CÔNG </h3>";
 else

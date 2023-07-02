@@ -60,6 +60,10 @@
                 	<input type="checkbox" id="agree" value="1" onclick="CheckBox();">
                     <label for="agree">I agree</label>
                 </div>
+                <p>Choose your avatar:</p>
+                <div class="input_box">
+                    <input type="file" name="image" id="image" placeholder="Choose Avatar">
+                </div>
                 <a href="index.html" class="back">Back to Home</a>
                 <div class="button_item"  >
                 	<button id="b1" type="submit"  disabled >

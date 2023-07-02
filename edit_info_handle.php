@@ -11,8 +11,9 @@ $email = $_REQUEST["email"];
 $phone = $_REQUEST["phone"];
 $gender = $_REQUEST["rGender"];
 $address = $_REQUEST["address"];
+$image = $_REQUEST["image"];
 
-$ketqua = updateUser($ID, $full_name, $dob, $email, $phone, $gender, $address) ;
+$ketqua = updateUser($ID, $full_name, $dob, $email, $phone, $gender, $address,$image) ;
 if($ketqua == TRUE) 
     echo "<h3> THÀNH CÔNG </h3>";
 else

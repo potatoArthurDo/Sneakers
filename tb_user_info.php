@@ -15,11 +15,11 @@ function getListUser() {
     }
 }
 
-function AddUser($full_name, $password, $dob, $email, $phone, $gender, $address) {
+function AddUser($full_name, $password, $dob, $email, $phone, $gender, $address,$image) {
     $conn = ConnectDB();
     if($conn == NULL)
         return NULL;
-    $sql = "INSERT INTO userinfo VALUES(NULL,?,?,?,?,?,?,?,NULL)";
+    $sql = "INSERT INTO userinfo VALUES(NULL,?,?,?,?,?,?,?,?)";
     $pdo_stm = $conn->prepare($sql);
     // $pdo_stm->bindParam(1,$full_name);
     // $pdo_stm->bindParam(2,$password);
@@ -28,7 +28,7 @@ function AddUser($full_name, $password, $dob, $email, $phone, $gender, $address)
     // $pdo_stm->bindParam(5,$phone);
     // $pdo_stm->bindParam(6,$gender);
     // $pdo_stm->bindParam(7,$address);
-    $data=[$full_name, $password, $dob, $email, $phone, $gender, $address];
+    $data=[$full_name, $password, $dob, $email, $phone, $gender, $address, $image];
     $ketqua = $pdo_stm->execute($data);
     return $ketqua;   
 }
@@ -50,21 +50,22 @@ function getUser($ID) {
     }
 }
 
-function updateUser($ID, $full_name, $dob, $email, $phone, $gender, $address) {
+function updateUser($ID, $full_name, $dob, $email, $phone, $gender, $address, $image) {
     $conn = ConnectDB();
     if($conn == NULL)
         return NULL;
     $sql = "UPDATE userinfo 
-            SET full_name=?, doc=?, email=?, phone=?, gender=?, address=?
+            SET full_name=?, doc=?, email=?, phone=?, gender=?, address=?, image=?
             WHERE ID=?";
     $pdo_stm = $conn->prepare($sql);
-    $pdo_stm->bindParam(1,$full_name);
-    $pdo_stm->bindParam(2,$dob);
-    $pdo_stm->bindParam(3,$email);
-    $pdo_stm->bindParam(4,$phone);
-    $pdo_stm->bindParam(5,$gender);
-    $pdo_stm->bindParam(6,$address);
-    $ketqua = $pdo_stm->execute();
+    // $pdo_stm->bindParam(1,$full_name);
+    // $pdo_stm->bindParam(2,$dob);
+    // $pdo_stm->bindParam(3,$email);
+    // $pdo_stm->bindParam(4,$phone);
+    // $pdo_stm->bindParam(5,$gender);
+    // $pdo_stm->bindParam(6,$address);
+    $data =[$ID];
+    $ketqua = $pdo_stm->execute($data);
     return $ketqua;
 }
 

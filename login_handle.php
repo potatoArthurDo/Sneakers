@@ -12,6 +12,7 @@ if($ketqua == true)
 {
     echo "print";
     $_SESSION["full_name"]=$ketqua["full_name"];
+    $_SESSION["image"]=$ketqua["image"];
     $_SESSION["logined"] = "OK";
     //require_once("tb_user_info");
     header("Location: admin.php");

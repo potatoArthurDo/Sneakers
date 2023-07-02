@@ -18,8 +18,8 @@ require("Login_confirmed.php");
             <ul class="nav">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="shop.html">Shop</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><h3> Hello,<?=$_SESSION["full_name"]?> </h3></li>
+                <li> <?=$_SESSION["image"]?><</li>
+                <li >Hello,<?=$_SESSION["full_name"]?></li>
                 <li> <form action="logout.php"><Button> Log out</Button> </form></li>
                 <li><a href="cart.html" class="shopping_bag"><img src="images/shopping_bag_FILL0_wght400_GRAD0_opsz48.png" alt=""></a></li>
             </ul>
