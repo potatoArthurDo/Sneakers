@@ -62,7 +62,7 @@
                 </div>
                 <p>Choose your avatar:</p>
                 <div class="input_box">
-                    <input type="file" name="image" id="image" placeholder="Choose Avatar">
+                    <input type="file" name="image" id="image" placeholder="Choose Avatar" value="<?=$row["image"]?>" method="post" enctype="multipart/form-data">
                 </div>
                 <a href="index.html" class="back">Back to Home</a>
                 <div class="button_item"  >

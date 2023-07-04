@@ -1,5 +1,6 @@
 <?php
 require_once("tb_user_info.php");
+require_once("uploadFile.php");
 
 if(isset($_REQUEST["b1"]) ==FALSE)
     die("<h3> Chưa nhập form </h3>");
@@ -11,12 +12,13 @@ $email = $_REQUEST["email"];
 $phone = $_REQUEST["phone"];
 $gender = $_REQUEST["rGender"];
 $address = $_REQUEST["address"];
-$image = $_REQUEST["image"];
+$image = UploadFile("image", "images");
 
 $ketqua = updateUser($ID, $full_name, $dob, $email, $phone, $gender, $address,$image) ;
-if($ketqua == TRUE) 
+if($ketqua == TRUE) {
     echo "<h3> THÀNH CÔNG </h3>";
-else
-    echo "<h3> LỖI THÊM DỮ LIỆU </h3>";  
+    echo "<a href=\"login.php\">Return to Login</a>";
+}
+else {
+    echo "<h3> LỖI THÊM DỮ LIỆU </h3>";  }
 ?>
-<a href="userList.php">Users</a>

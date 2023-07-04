@@ -123,6 +123,8 @@ nav li button {
     color: maroon;
  }
 
+
+
  .product {
     text-align: center;
  }
@@ -131,8 +133,9 @@ nav li button {
     display: flex;
     justify-content: space-between;
     padding-top: 20px;
-    flex-wrap: wrap;
- }
+    flex-wrap:wrap; 
+   }
+   
  .product .pro_container {
     width: 23%;
     min-width: 250px;
@@ -476,8 +479,15 @@ input[type=checkbox] {width:30px; height:30px; margin-right:10px}
    border: none;
    background: maroon;
    color: white;
-   font-size: 15px;
-   font-weight: 700;
    padding: 20px 10px 20px 10px;
    border-radius: 20px;
+   text-decoration: none;
+}
+
+.checkout a {
+   text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    transition: 0.3s ease;
 }

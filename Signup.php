@@ -12,7 +12,7 @@
 <div id="login_box">
 	<div id="login_title">SUNDAY</div>
     <div id="login_form">
-    	<form name="form1" id="form1" action="signup_handle.php"  >
+    	<form name="form1" id="form1" action="signup_handle.php"  method="post" enctype="multipart/form-data" >
         	<fieldset class="form_group">
             	<legend>Sign up your account</legend>
                 <p>Enter your personal details below:</p>
@@ -61,8 +61,8 @@
                 <div id="ErorrRePass"></div>
 
                 <p>Choose your avatar:</p>
-                <div class="input_box">
-                    <input type="file" name="image" id="image" placeholder="Choose Avatar" action="imageModify.php">
+                <div class="input_box" >
+                    <input type="file" name="image" id="image" placeholder="Choose Avatar" >
                 </div>
                 
                 <div class="check_box">

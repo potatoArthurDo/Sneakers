@@ -1,6 +1,7 @@
 <?php
 session_start();
 require("Login_confirmed.php");
+
 ?>
 
 <!DOCTYPE html>
@@ -14,14 +15,14 @@ require("Login_confirmed.php");
 <body>
     <nav>
     <div class="header">
-        <a href="index.html" class="Logo">SUNDAY</a>
+        <a href="admin.php" class="Logo">SUNDAY</a>
             <ul class="nav">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li> <?=$_SESSION["image"]?><</li>
-                <li >Hello,<?=$_SESSION["full_name"]?></li>
+                <li><a href="admin.php">Home</a></li>
+                <li><a href="shop_admin.php">Shop</a></li>
+                <li><a href="about_admin.html">About</a></li>
+                <li><h3> Hello,<?=$_SESSION["full_name"]?> </h3></li>
                 <li> <form action="logout.php"><Button> Log out</Button> </form></li>
-                <li><a href="cart.html" class="shopping_bag"><img src="images/shopping_bag_FILL0_wght400_GRAD0_opsz48.png" alt=""></a></li>
+                <li><a href="admin_edit_page.php">Edit page</a></li>
             </ul>
     </div>
     </nav>
@@ -30,102 +31,37 @@ require("Login_confirmed.php");
         <h2>Super Deals</h2>
         <h1>On all products</h1>
         <p>Check out the lastest! </p>
-        <a href="shop.html"><button>Shop Now</button></a>
+        <a href="shop.php"><button>Shop Now</button></a>
     </section>
 
     <section class="product">
         <h1>Featured Products</h1>
         <p>Newest Collection</p>
-            <div class="all_pro">
+        <div class="all_pro">
+        <?php
+        require_once("tb_products.php");
+        $rows = getListProduct();
+        if ($rows == NULL)
+            die("<p> LỖI CƠ SỞ DỮ LIỆU </p>");
+        foreach($rows as $row)
+        {
+        ?>
             <div class="pro_container">
-                <img src="images/db74312b-6881-448a-9049-e5b191ca2166.webp" >
+                <img src=<?=$row["image"]?> >
                 <div class="des">
-                    <span>Nike</span>
-                    <h4>LeBron 20</h4>
-                    <h5>$170.97</h5>
+                    <span><?=$row["brand_name"]?></span>
+                    <h4><?=$row["name"]?></h4>
+                    <h5><?=$row["price"]?></h5>
                     <div>
                         <a href="#" class="add"><img src="images/add_circle_FILL0_wght400_GRAD0_opsz48.png" alt=""></a>
                     </div>
                 </div>
             </div>
-            <div class="pro_container">
-                <img src="images/7fa7ceacc9a541d0ae36acd401257570_9366.webp" >
-                <div class="des">
-                    <span>Brand name</span>
-                    <h4>Detail description</h4>
-                    <h5>344vnd</h5>
-                    <div>
-                        <a href="#" class="add"><img src="images/add_circle_FILL0_wght400_GRAD0_opsz48.png" alt=""></a>
-                    </div>
-                </div>
-            </div>
-            <div class="pro_container">
-                <img src="images/db74312b-6881-448a-9049-e5b191ca2166.webp" >
-                <div class="des">
-                    <span>Brand name</span>
-                    <h4>Detail description</h4>
-                    <h5>344vnd</h5>
-                    <div>
-                        <a href="#" class="add"><img src="images/add_circle_FILL0_wght400_GRAD0_opsz48.png" alt=""></a>
-                    </div>
-                </div>
-            </div>
-            <div class="pro_container">
-                <img src="images/db74312b-6881-448a-9049-e5b191ca2166.webp" >
-                <div class="des">
-                    <span>Brand name</span>
-                    <h4>Detail description</h4>
-                    <h5>344vnd</h5>
-                    <div>
-                        <a href="#" class="add"><img src="images/add_circle_FILL0_wght400_GRAD0_opsz48.png" alt=""></a>
-                    </div>
-                </div>
-            </div>
-            <div class="pro_container">
-                <img src="images/db74312b-6881-448a-9049-e5b191ca2166.webp" >
-                <div class="des">
-                    <span>Brand name</span>
-                    <h4>Detail description</h4>
-                    <h5>344vnd</h5>
-                    <div>
-                        <a href="#" class="add"><img src="images/add_circle_FILL0_wght400_GRAD0_opsz48.png" alt=""></a>
-                    </div>
-                </div>
-            </div>
-            <div class="pro_container">
-                <img src="images/db74312b-6881-448a-9049-e5b191ca2166.webp" >
-                <div class="des">
-                    <span>Brand name</span>
-                    <h4>Detail description</h4>
-                    <h5>344vnd</h5>
-                    <div>
-                        <a href="#" class="add"><img src="images/add_circle_FILL0_wght400_GRAD0_opsz48.png" alt=""></a>
-                    </div>
-                </div>
-            </div>
-            <div class="pro_container">
-                <img src="images/db74312b-6881-448a-9049-e5b191ca2166.webp" >
-                <div class="des">
-                    <span>Brand name</span>
-                    <h4>Detail description</h4>
-                    <h5>344vnd</h5>
-                    <div>
-                        <a href="#" class="add"><img src="images/add_circle_FILL0_wght400_GRAD0_opsz48.png" alt=""></a>
-                    </div>
-                </div>
-            </div>
-            <div class="pro_container">
-                <img src="images/db74312b-6881-448a-9049-e5b191ca2166.webp" >
-                <div class="des">
-                    <span>Brand name</span>
-                    <h4>Detail description</h4>
-                    <h5>344vnd</h5>
-                    <div>
-                        <a href="#" class="add"><img src="images/add_circle_FILL0_wght400_GRAD0_opsz48.png" alt=""></a>
-                    </div>
-                </div>
-            </div>
+            <?php
+            }
+        ?>
         </div>
+        
     </section>
 
     <section class="banner">
