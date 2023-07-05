@@ -39,7 +39,7 @@
             <td><?=$row["gender"]==0?"Nam":"Nữ"?></td>
             <td><?=$row["address"]?></td>
             <td align="center" valign="middle">
-                <img src="images/<?=$image?>" width="80">
+                <img src="images/<?=$row["image"]?>" width="80">
             </td>
             <td>
                 <a href="EditInfo.php?ID=<?=$row["ID"]?>">Edit</a> 

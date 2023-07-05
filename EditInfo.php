@@ -21,10 +21,11 @@
         require_once("tb_user_info.php");
         $row = getUser($ID);
         ?>
-    	<form name="form1" id="form1" action="edit_info_handle.php"  >
+    	<form name="form1" id="form1" action="edit_info_handle.php" enctype="multipart/form-data" method="post" >
         	<fieldset class="form_group">
             	<legend>Modify your account</legend>
                 <p>Enter your personal details below:</p>
+                <input type="hidden" name="ID" id="ID" value="<?=$row["ID"]?>">
                 <div class="input_box">
                     <input type="text" id="fullname" name="fullname" class="input_item" placeholder="Fullname" onkeyup = "CheckName();" value="<?=$row["full_name"]?>">
                 </div>
@@ -56,17 +57,28 @@
                     <input type="text" id="email" name= "email" class="input_item" placeholder="Email" onkeyup="CheckEmail()">
                 </div>
                 <div id="ErorrEmail"></div>
+                
+                <div class="input_box">
+                    <input type="password" id="password" name="password" class="input_item" placeholder="Password" onkeyup = "CheckPass()">
+                </div>
+                <div id="ErorrPass"></div>
+                
+                <div class="input_box">
+                    <input type="password" id="re_password" class="input_item" placeholder="Re-Password" onkeyup="CheckRePass()">
+                </div>
+                <div id="ErorrRePass"></div>
                 <div class="check_box">
                 	<input type="checkbox" id="agree" value="1" onclick="CheckBox();">
                     <label for="agree">I agree</label>
                 </div>
+                
                 <p>Choose your avatar:</p>
                 <div class="input_box">
-                    <input type="file" name="image" id="image" placeholder="Choose Avatar" value="<?=$row["image"]?>" method="post" enctype="multipart/form-data">
+                    <input type="file" name="image" id="image" placeholder="Choose Avatar" value="<?=$row["image"]?>" >
                 </div>
                 <a href="index.html" class="back">Back to Home</a>
                 <div class="button_item"  >
-                	<button id="b1" type="submit"  disabled >
+                	<button id="b1" name="b1" type="submit"  disabled >
                     Submit
                     </button>
                     
@@ -81,7 +93,8 @@
     function CheckBox() {
     checkbox = document.getElementById("agree")
     button = document.getElementById("b1")
-    if( checkbox.checked && CheckName() == true &&  CheckAddress() == true && CheckEmail()==true && CheckPhone() == true ) {
+    if( checkbox.checked && CheckName() == true &&  CheckAddress() == true && CheckEmail()==true && CheckPhone() == true
+    && CheckPass() == true &&CheckRePass() == true ) {
         button.removeAttribute("disabled");
     }
     else {
@@ -153,6 +166,39 @@
         document.getElementById("ErorrEmail").style.color = "green"
         return true;
     }
+    }
+    function CheckPass() {
+    re2 = new RegExp();
+    re2 =  /^\w{6}\w*$/;
+    if(document.getElementById("password").value =="") {
+        document.getElementById("ErorrPass").innerText = "The field is required.";
+        document.getElementById("ErorrPass").style.color = "red"
+        return false;
+    }
+    
+    else if(re2.test(document.getElementById("password").value) == false) {
+        document.getElementById("ErorrPass").innerText = "Please enter at least six characters.";
+        document.getElementById("ErorrPass").style.color = "red"
+        return false;
+    }
+    else {
+        document.getElementById("ErorrPass").innerText = "Confirmed.";
+        document.getElementById("ErorrPass").style.color = "green"
+        return true;
+    }
+    }
+
+    function CheckRePass() {
+        if(document.getElementById("re_password").value == document.getElementById("password").value) {
+            document.getElementById("ErorrRePass").innerText = "Confirmed.";
+            document.getElementById("ErorrRePass").style.color = "green"
+            return true;
+        }
+        else {
+            document.getElementById("ErorrRePass").innerText = "Incorrect.";
+            document.getElementById("ErorrRePass").style.color = "red"
+            return false;
+        }
     }
 </script>
 </html>

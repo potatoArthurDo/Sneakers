@@ -17,7 +17,7 @@ require("Login_confirmed.php");
         <a href="userPage.php" class="Logo">SUNDAY</a>
             <ul class="nav">
                 <li><a href="userPage.php">Home</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="auser_bout.html">About</a></li>
                 <li><h3> Hello,<?=$_SESSION["full_name"]?> </h3></li>
                 <li> <form action="logout.php"><Button> Log out</Button> </form></li>
                 <li><a href="cart.php" class="shopping_bag"><img src="images/shopping_bag_FILL0_wght400_GRAD0_opsz48.png" alt=""></a></li>
@@ -65,11 +65,11 @@ require("Login_confirmed.php");
 
         <div class="col">
             <h4>About</h4>
-            <a href="about.html">About</a>
+            <a href="user_about.html">About</a>
             <a href="#">Delivery</a>
             <a href="#">Privacy Policy</a>
             <a href="#">Terms & Condition</a>
-            <a href="contact.html">Contact Us</a>
+            <a href="user_contact.html">Contact Us</a>
         </div>
     </footer>
     </body>

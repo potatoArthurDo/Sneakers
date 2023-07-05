@@ -19,7 +19,7 @@ require("Login_confirmed.php");
                 <li><a href="userPage.php">Home</a></li>
                 <li><a href="shop_user.php">Shop</a></li>
                 <li><h3> Hello,<?=$_SESSION["full_name"]?> </h3></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="user_about.html">About</a></li>
                 <li> <form action="logout.php"><Button> Log out</Button> </form></li>
             </ul>
     </div>
@@ -96,11 +96,11 @@ require("Login_confirmed.php");
 
         <div class="col">
             <h4>About</h4>
-            <a href="about.html">About</a>
+            <a href="user_about.html">About</a>
             <a href="#">Delivery</a>
             <a href="#">Privacy Policy</a>
             <a href="#">Terms & Condition</a>
-            <a href="contact.html">Contact Us</a>
+            <a href="user_contact.html">Contact Us</a>
         </div>
     </footer>
 </body>

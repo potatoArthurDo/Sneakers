@@ -69,8 +69,8 @@
                 	<input type="checkbox" id="agree" value="1" onclick="CheckBox();">
                     <label for="agree">I agree</label>
                 </div>
-                <p>Already have an account? <a href="Login.html">Login</a></p>
-                <a href="index.html" class="back">Back to Home</a>
+                <p>Already have an account? <a href="Login.php">Login</a></p>
+                <a href="index.php" class="back">Back to Home</a>
                 <div class="button_item">
                 	<button id="b1" name="b1" type="submit"  disabled >
                     Submit

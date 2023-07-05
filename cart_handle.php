@@ -45,8 +45,9 @@ if(isset($_POST["add_to_cart"]) ) {
 }
 
 if(isset($_POST["remove_item"]) ) {
+    $item_name = $_REQUEST["item_name"];
     foreach($_SESSION["shoping_cart"] as $keys => $value) {
-        if($value["item_name"] == $_POST["item_name"])
+        if($value["$item_name"] == $_POST["item_name"])
         {
             unset($_SESSION["shoping_cart"][$keys]);
             $_SESSION["shoping_cart"]= array_values($_SESSION["shoping_cart"]);

@@ -1,0 +1,46 @@
+<?php
+session_start();
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Edit</title>
+    <style>
+        .add_product {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            
+        }
+
+        .add_product .input {
+            width: 100%;
+            font-size: 15px;
+            margin: 80px;
+            padding:5px 10px;
+        }
+    </style>
+</head>
+<body>
+<h2>Add more products to database.</h2>
+    <div class="add_product">
+        <form action="add_product_handle.php" enctype="multipart/form-data" method="post">
+            <input type="text" name="add_p_name" placeholder="Product name" >
+            <br>
+            <input type="text" name="add_p_brand_name" placeholder="Brand name" >
+            <br>
+            <input type="number" name="add_p_price" placeholder="Product price" >
+            <br>
+            <input type="file" name="add_p_image" placeholder="Product image" >
+            <br>
+            <input type="text" name="add_p_detail" placeholder="Product details" >
+            <button type="submit" name="b1">Confirm</button>
+        </form>
+        <br>
+    </div>
+    <div> <a href="admin.php">Go back to admin page</a> </div>
+</body>
+</html>

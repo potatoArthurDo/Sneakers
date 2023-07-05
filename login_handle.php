@@ -8,12 +8,13 @@ $email = $_REQUEST["email"];
 $password= $_REQUEST["password"];
 
 $ketqua = CheckLogin($email,$password);
-if($email == "athur4c@gmail.com" && $password == "123456")
+if($email == "aa@gmail.com" && $password == "456789")
 {
-    $_SESSION["logined"] = "OK";
+    $_SESSION["logined"] = "admin";
+    $_SESSION["full_name"]=$ketqua["full_name"];
     header("Location: admin.php");
 }
-if($ketqua == true)
+else if($ketqua == true)
 {
     $_SESSION["full_name"]=$ketqua["full_name"];
     $_SESSION["image"]=$ketqua["image"];

@@ -15,13 +15,13 @@ function getListProduct() {
     }
 }
 
-function addProduct($name, $brand_name, $price,$status, $image) {
+function addProduct($name, $brand_name, $price, $image,$detail) {
     $conn = ConnectDB();
     if($conn == NULL)
         return NULL;
-    $sql = "INSERT INTO products VALUES(NULL,?,?,?,?,?)";
+    $sql = "INSERT INTO products VALUES(NULL,?,?,?,NULL,?,?)";
     $pdo_stm = $conn->prepare($sql);
-    $data = [$name,$brand_name,$price,$status,$image];
+    $data = [$name,$brand_name,$price,$image,$detail];
     $ketqua = $pdo_stm->execute($data);
     return $ketqua;
 }
@@ -42,20 +42,20 @@ function getProduct($id) {
     }
 }
 
-function updateProduct($ID, $name, $brand_name, $price,$status, $image) {
+function updateProduct($ID,$name, $brand_name, $price, $image,$detail) {
     $conn = ConnectDB();
     if($conn == NULL)
         return NULL;
     $sql = "UPDATE products
-            SET name=?, brand_name=?, price=?,status=?,image=?
+            SET name=?, brand_name=?, price=?,image=?,detail=?
             WHERE ID=?";
     $pdo_stm = $conn->prepare($sql);
-    $data = [$ID];
+    $data = [$name, $brand_name, $price, $image,$detail,$ID];
     $ketqua = $pdo_stm->execute($data);
     return $ketqua;
 }
 
-function DeleteUser($ID) {
+function DeleteProduct($ID) {
     $conn = ConnectDB();
     if($conn == NULL)
         return NULL;

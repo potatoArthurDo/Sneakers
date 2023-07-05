@@ -14,7 +14,7 @@ $gender = $_REQUEST["rGender"];
 $address = $_REQUEST["address"];
 $image = UploadFile("image", "images");
 
-$ketqua = updateUser($ID, $full_name, $dob, $email, $phone, $gender, $address,$image) ;
+$ketqua = updateUser($ID, $full_name, $password, $dob, $email, $phone, $gender, $address,$image) ;
 if($ketqua == TRUE) {
     echo "<h3> THÀNH CÔNG </h3>";
     echo "<a href=\"login.php\">Return to Login</a>";

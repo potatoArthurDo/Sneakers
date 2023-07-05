@@ -15,8 +15,8 @@ $image = UploadFile("image", "images");
 
 $ketqua = AddUser($full_name, $password, $dob, $email, $phone, $gender, $address, $image) ;
 if($ketqua == TRUE)  {
-    echo "<h3> THÀNH CÔNG </h3>";
-    echo "<a href=\"login.php\">Return to Login</a>";
+    echo '<script>alert("SIGN UP SUCCESSFULLY")
+            window.location.href="login.php"</script>';
 }
 else {
     echo "<h3> LỖI THÊM DỮ LIỆU </h3>";  

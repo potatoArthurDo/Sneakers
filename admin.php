@@ -18,11 +18,9 @@ require("Login_confirmed.php");
         <a href="admin.php" class="Logo">SUNDAY</a>
             <ul class="nav">
                 <li><a href="admin.php">Home</a></li>
-                <li><a href="shop_admin.php">Shop</a></li>
-                <li><a href="about_admin.html">About</a></li>
                 <li><h3> Hello,<?=$_SESSION["full_name"]?> </h3></li>
                 <li> <form action="logout.php"><Button> Log out</Button> </form></li>
-                <li><a href="admin_edit_page.php">Edit page</a></li>
+                <li><a href="admin_add_product.html">Add product</a></li>
             </ul>
     </div>
     </nav>
@@ -53,7 +51,10 @@ require("Login_confirmed.php");
                     <h4><?=$row["name"]?></h4>
                     <h5>$<?=$row["price"]?></h5>
                     <div>
-                        <a href="product.php?ID=<?=$row["ID"]?>" class="add"><img src="images/add_circle_FILL0_wght400_GRAD0_opsz48.png" alt=""></a>
+                        <a href="admin_edit_product.php?ID=<?=$row["ID"]?>" >Edit</a>
+                    </div>
+                    <div>
+                    <a href="admin_delete_product.php?ID=<?=$row["ID"]?>" >Delete</a>
                     </div>
                 </div>
             </div>
