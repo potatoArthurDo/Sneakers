@@ -15,7 +15,6 @@
                 <li><a href="shop.php">Shop</a></li>
                 <li><a href="about.html">About</a></li>
                 <li> <form action="login.php"><Button> Log in</Button> </form></li>
-                <li><a href="cart.html" class="shopping_bag"><img src="images/shopping_bag_FILL0_wght400_GRAD0_opsz48.png" alt=""></a></li>
             </ul>
     </div>
     </nav>
@@ -31,101 +30,35 @@
         <h1>Featured Products</h1>
         <p>Newest Collection</p>
             <div class="all_pro">
-            <div class="pro_container">
-                <img src="images/db74312b-6881-448a-9049-e5b191ca2166.webp" >
-                <div class="des">
-                    <span>Nike</span>
-                    <h4>LeBron 20</h4>
-                    <h5>$170.97</h5>
-                    <div>
-                        <a href="#" class="add"><img src="images/add_circle_FILL0_wght400_GRAD0_opsz48.png" alt=""></a>
+                <?php
+                require_once("tb_products.php");
+                $rows = getListProduct();
+                if ($rows == NULL)
+                    die("<p> LỖI CƠ SỞ DỮ LIỆU </p>");
+                foreach($rows as $row)
+                {
+                ?>
+                <div class="pro_container">
+                    <img src=<?=$row["image"]?> >
+                    <div class="des">
+                        <span><?=$row["brand_name"]?></span>
+                        <h4><?=$row["name"]?></h4>
+                        <h5>$<?=$row["price"]?></h5>
+                        <div>
+                            <a href="login.php" class="add"><img src="images/add_circle_FILL0_wght400_GRAD0_opsz48.png" alt=""></a>
+                        </div>
                     </div>
                 </div>
+            <?php
+            }
+            ?>  
             </div>
-            <div class="pro_container">
-                <img src="images/7fa7ceacc9a541d0ae36acd401257570_9366.webp" >
-                <div class="des">
-                    <span>Brand name</span>
-                    <h4>Detail description</h4>
-                    <h5>344vnd</h5>
-                    <div>
-                        <a href="#" class="add"><img src="images/add_circle_FILL0_wght400_GRAD0_opsz48.png" alt=""></a>
-                    </div>
-                </div>
-            </div>
-            <div class="pro_container">
-                <img src="images/db74312b-6881-448a-9049-e5b191ca2166.webp" >
-                <div class="des">
-                    <span>Brand name</span>
-                    <h4>Detail description</h4>
-                    <h5>344vnd</h5>
-                    <div>
-                        <a href="#" class="add"><img src="images/add_circle_FILL0_wght400_GRAD0_opsz48.png" alt=""></a>
-                    </div>
-                </div>
-            </div>
-            <div class="pro_container">
-                <img src="images/db74312b-6881-448a-9049-e5b191ca2166.webp" >
-                <div class="des">
-                    <span>Brand name</span>
-                    <h4>Detail description</h4>
-                    <h5>344vnd</h5>
-                    <div>
-                        <a href="#" class="add"><img src="images/add_circle_FILL0_wght400_GRAD0_opsz48.png" alt=""></a>
-                    </div>
-                </div>
-            </div>
-            <div class="pro_container">
-                <img src="images/db74312b-6881-448a-9049-e5b191ca2166.webp" >
-                <div class="des">
-                    <span>Brand name</span>
-                    <h4>Detail description</h4>
-                    <h5>344vnd</h5>
-                    <div>
-                        <a href="#" class="add"><img src="images/add_circle_FILL0_wght400_GRAD0_opsz48.png" alt=""></a>
-                    </div>
-                </div>
-            </div>
-            <div class="pro_container">
-                <img src="images/db74312b-6881-448a-9049-e5b191ca2166.webp" >
-                <div class="des">
-                    <span>Brand name</span>
-                    <h4>Detail description</h4>
-                    <h5>344vnd</h5>
-                    <div>
-                        <a href="#" class="add"><img src="images/add_circle_FILL0_wght400_GRAD0_opsz48.png" alt=""></a>
-                    </div>
-                </div>
-            </div>
-            <div class="pro_container">
-                <img src="images/db74312b-6881-448a-9049-e5b191ca2166.webp" >
-                <div class="des">
-                    <span>Brand name</span>
-                    <h4>Detail description</h4>
-                    <h5>344vnd</h5>
-                    <div>
-                        <a href="#" class="add"><img src="images/add_circle_FILL0_wght400_GRAD0_opsz48.png" alt=""></a>
-                    </div>
-                </div>
-            </div>
-            <div class="pro_container">
-                <img src="images/db74312b-6881-448a-9049-e5b191ca2166.webp" >
-                <div class="des">
-                    <span>Brand name</span>
-                    <h4>Detail description</h4>
-                    <h5>344vnd</h5>
-                    <div>
-                        <a href="#" class="add"><img src="images/add_circle_FILL0_wght400_GRAD0_opsz48.png" alt=""></a>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
 
     <section class="banner">
         <h4>Sneakers Sunday Season</h4>
         <h2>Up to <span>70% off </span> - All Sneakers and Accessories </h2>
-        <a href="shop.html"><button> Explore More </button></a>
+        <a href="shop.php"><button> Explore More </button></a>
     </section>
 
     <footer class="footer">

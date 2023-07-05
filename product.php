@@ -1,3 +1,8 @@
+<?php
+session_start();
+require("Login_confirmed.php");
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,21 +14,42 @@
 <body>
     <nav>
     <div class="header">
-        <a href="index.php" class="Logo">SUNDAY</a>
+        <a href="userPage.php" class="Logo">SUNDAY</a>
             <ul class="nav">
-                <li><a href="index.php">Home</a></li>
-                <li><a href="shop.php">Shop</a></li>
+                <li><a href="userPage.php">Home</a></li>
+                <li><a href="shop_user.php">Shop</a></li>
                 <li><a href="about.html">About</a></li>
-                <li> <form action="login.php"><Button> Log in</Button> </form></li>
+                <li><h3> Hello,<?=$_SESSION["full_name"]?> </h3></li>
+                <li> <form action="logout.php"><Button> Log out</Button> </form></li>
+                <li><a href="cart.php" class="shopping_bag"><img src="images/shopping_bag_FILL0_wght400_GRAD0_opsz48.png" alt=""></a></li>
             </ul>
     </div>
     </nav>
-    <section class="header_banner">
-        <h2>$neaker$unday</h2>
-        <h4>Up to 70% off</h4>
+    <section class="p_detail" >
+        <?php
+        $ID = $_REQUEST["ID"];
+        require_once("tb_products.php");
+        $row = getProduct($ID);
+         ?>
+        <form action="cart_handle.php?&ID=<?=$row["ID"]?> " method ="POST">
+        <div class="p_image">
+            <img name="image" src="<?=$row["image"]?> " width="100%">
+        </div>
+        <div class="single_p_detail">
+            <h5 name="brand_name"><?=$row["brand_name"]?></h5>
+            <h4 name="name"><?=$row["name"]?></h4>
+            <h2 name="price">$<?=$row["price"]?></h2>
+            <input name="quantity" type="number" value="1">
+            <button name="add_to_cart" type="submit" >Add To Cart</button>
+            <h4>Product Details</h4>
+            <span><?=$row["detail"]?> </span>
+        </div>
+        </form>
     </section>
+
     <section class="product">
-    <div class="all_pro">
+        <h2>You May Also Like..</h2>
+        <div class="all_pro">
         <?php
         require_once("tb_products.php");
         $rows = getListProduct();
@@ -39,16 +65,15 @@
                 <h4><?=$row["name"]?></h4>
                 <h5><?=$row["price"]?></h5>
                 <div>
-                    <a href="login.php" class="add"><img src="images/add_circle_FILL0_wght400_GRAD0_opsz48.png" alt=""></a>
+                    <a href="product.php?ID=<?=$row["ID"]?>" class="add"><img src="images/add_circle_FILL0_wght400_GRAD0_opsz48.png" alt=""></a>
                 </div>
             </div>
         </div>
         <?php
         }
         ?>  
-    </div>
-        <div class="block"></div>
-    </section>
+        </div>
+    <div class="block"></div>
     <footer class="footer">
         <div class="col">
             <div class="Logo">SUNDAY</div>

@@ -1,3 +1,8 @@
+<?php
+session_start();
+require("Login_confirmed.php");
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,12 +14,13 @@
 <body>
     <nav>
     <div class="header">
-        <a href="index.php" class="Logo">SUNDAY</a>
+        <a href="userPage.php" class="Logo">SUNDAY</a>
             <ul class="nav">
-                <li><a href="index.php">Home</a></li>
-                <li><a href="shop.php">Shop</a></li>
+                <li><a href="userPage.php">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li> <form action="login.php"><Button> Log in</Button> </form></li>
+                <li><h3> Hello,<?=$_SESSION["full_name"]?> </h3></li>
+                <li> <form action="logout.php"><Button> Log out</Button> </form></li>
+                <li><a href="cart.php" class="shopping_bag"><img src="images/shopping_bag_FILL0_wght400_GRAD0_opsz48.png" alt=""></a></li>
             </ul>
     </div>
     </nav>
@@ -39,7 +45,7 @@
                 <h4><?=$row["name"]?></h4>
                 <h5><?=$row["price"]?></h5>
                 <div>
-                    <a href="login.php" class="add"><img src="images/add_circle_FILL0_wght400_GRAD0_opsz48.png" alt=""></a>
+                    <a href="product.php?ID=<?=$row["ID"]?>" class="add"><img src="images/add_circle_FILL0_wght400_GRAD0_opsz48.png" alt=""></a>
                 </div>
             </div>
         </div>

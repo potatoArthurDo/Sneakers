@@ -419,7 +419,7 @@ input[type=checkbox] {width:30px; height:30px; margin-right:10px}
 }
 
 .cart table td:nth-child(5) input {
-   width: 70px;
+   width: 50px;
    padding: 10px 5px 10px 15px;
 }
 

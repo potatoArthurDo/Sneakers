@@ -15,14 +15,13 @@ require("Login_confirmed.php");
 <body>
     <nav>
     <div class="header">
-        <a href="admin.php" class="Logo">SUNDAY</a>
+        <a href="userPage.php" class="Logo">SUNDAY</a>
             <ul class="nav">
-                <li><a href="admin.php">Home</a></li>
-                <li><a href="shop_admin.php">Shop</a></li>
-                <li><a href="about_admin.html">About</a></li>
+                <li><a href="userPage.php">Home</a></li>
+                <li><a href="shop_user.php">Shop</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><h3> Hello,<?=$_SESSION["full_name"]?> </h3></li>
                 <li> <form action="logout.php"><Button> Log out</Button> </form></li>
-                <li><a href="admin_edit_page.php">Edit page</a></li>
             </ul>
     </div>
     </nav>
@@ -67,7 +66,7 @@ require("Login_confirmed.php");
     <section class="banner">
         <h4>Sneakers Sunday Season</h4>
         <h2>Up to <span>70% off </span> - All Sneakers and Accessories </h2>
-        <a href="shop.html"><button> Explore More </button></a>
+        <a href="shop.php"><button> Explore More </button></a>
     </section>
 
     <footer class="footer">
