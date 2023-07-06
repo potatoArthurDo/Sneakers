@@ -36,7 +36,7 @@ session_start();
         require_once("tb_products.php");
         $row = getProduct($ID);
         ?>
-        <form action="admin_edit_product_handle.php?=<?=$row["ID"]?>" enctype="multipart/form-data" method="post">
+        <form action="admin_edit_product_handle.php?ID=<?=$row["ID"]?>" enctype="multipart/form-data" method="post">
             <input type="text" name="add_p_name" placeholder="Product name" value="<?=$row["name"]?>">
             <br>
             <input type="text" name="add_p_brand_name" placeholder="Brand name" value="<?=$row["brand_name"]?>">

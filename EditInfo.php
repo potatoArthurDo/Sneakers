@@ -54,7 +54,7 @@
                 </div>
                 <div id="ErorrGender"></div>
                 <div class="input_box">
-                    <input type="text" id="email" name= "email" class="input_item" placeholder="Email" onkeyup="CheckEmail()">
+                    <input type="text" id="email" name= "email" class="input_item" placeholder="Email" onkeyup="CheckEmail()" value="<?=$row["email"]?>">
                 </div>
                 <div id="ErorrEmail"></div>
                 
@@ -76,7 +76,7 @@
                 <div class="input_box">
                     <input type="file" name="image" id="image" placeholder="Choose Avatar" value="<?=$row["image"]?>" >
                 </div>
-                <a href="index.html" class="back">Back to Home</a>
+                <a href="userPage.php" class="back">Back to Home</a>
                 <div class="button_item"  >
                 	<button id="b1" name="b1" type="submit"  disabled >
                     Submit

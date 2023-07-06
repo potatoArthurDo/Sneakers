@@ -19,7 +19,7 @@ function addProduct($name, $brand_name, $price, $image,$detail) {
     $conn = ConnectDB();
     if($conn == NULL)
         return NULL;
-    $sql = "INSERT INTO products VALUES(NULL,?,?,?,NULL,?,?)";
+    $sql = "INSERT INTO products VALUES(NULL,?,?,?,?,?)";
     $pdo_stm = $conn->prepare($sql);
     $data = [$name,$brand_name,$price,$image,$detail];
     $ketqua = $pdo_stm->execute($data);
@@ -47,8 +47,7 @@ function updateProduct($ID,$name, $brand_name, $price, $image,$detail) {
     if($conn == NULL)
         return NULL;
     $sql = "UPDATE products
-            SET name=?, brand_name=?, price=?,image=?,detail=?
-            WHERE ID=?";
+            SET name=?, brand_name=?, price=?,image=?,detail=? WHERE ID=?";
     $pdo_stm = $conn->prepare($sql);
     $data = [$name, $brand_name, $price, $image,$detail,$ID];
     $ketqua = $pdo_stm->execute($data);

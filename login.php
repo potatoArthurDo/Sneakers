@@ -27,7 +27,7 @@
                     </button>
                 </div>
                 <p>Don't have an account yet? <a href="Signup.php">Create an account</a></p>
-                <a href="index.html" class="back">Back to Home</a>
+                <a href="index.php" class="back">Back to Home</a>
             </fieldset>
         </form>
     </div>

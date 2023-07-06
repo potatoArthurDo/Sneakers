@@ -17,7 +17,7 @@ if($email == "aa@gmail.com" && $password == "456789")
 else if($ketqua == true)
 {
     $_SESSION["full_name"]=$ketqua["full_name"];
-    $_SESSION["image"]=$ketqua["image"];
+    $_SESSION["ID"]=$ketqua["ID"];
     $_SESSION["logined"] = "OK";
     header("Location: userPage.php");
 }

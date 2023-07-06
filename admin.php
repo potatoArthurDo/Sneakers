@@ -29,7 +29,7 @@ require("Login_confirmed.php");
         <h2>Super Deals</h2>
         <h1>On all products</h1>
         <p>Check out the lastest! </p>
-        <a href="shop.php"><button>Shop Now</button></a>
+        <a href="#"><button>Shop Now</button></a>
     </section>
 
     <section class="product">
@@ -68,7 +68,7 @@ require("Login_confirmed.php");
     <section class="banner">
         <h4>Sneakers Sunday Season</h4>
         <h2>Up to <span>70% off </span> - All Sneakers and Accessories </h2>
-        <a href="shop.html"><button> Explore More </button></a>
+        <a href="#"><button> Explore More </button></a>
     </section>
 
     <footer class="footer">
@@ -81,11 +81,11 @@ require("Login_confirmed.php");
 
         <div class="col">
             <h4>About</h4>
-            <a href="about.html">About</a>
+            <a href="#">About</a>
             <a href="#">Delivery</a>
             <a href="#">Privacy Policy</a>
             <a href="#">Terms & Condition</a>
-            <a href="contact.html">Contact Us</a>
+            <a href="#">Contact Us</a>
         </div>
     </footer>
 </body> 

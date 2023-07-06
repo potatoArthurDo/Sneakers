@@ -55,16 +55,9 @@ function updateUser($ID, $full_name, $password, $dob, $email, $phone, $gender, $
     if($conn == NULL)
         return NULL;
     $sql = "UPDATE userinfo 
-            SET full_name=?, password=?, dob=?, email=?, phone=?, gender=?, address=?, image=?
-            WHERE ID=?";
+            SET full_name=?, password=?, dob=?, email=?, phone=?, gender=?, address=?, image=? WHERE ID=?";
     $pdo_stm = $conn->prepare($sql);
-    // $pdo_stm->bindParam(1,$full_name);
-    // $pdo_stm->bindParam(2,$dob);
-    // $pdo_stm->bindParam(3,$email);
-    // $pdo_stm->bindParam(4,$phone);
-    // $pdo_stm->bindParam(5,$gender);
-    // $pdo_stm->bindParam(6,$address);
-    $data =[$ID,$full_name, $password, $dob, $email, $phone, $gender, $address, $image];
+    $data =[$full_name, $password, $dob, $email, $phone, $gender, $address, $image,$ID];
     $ketqua = $pdo_stm->execute($data);
     return $ketqua;
 }

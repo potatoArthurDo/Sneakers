@@ -21,6 +21,7 @@ require("Login_confirmed.php");
                 <li><a href="shop_user.php">Shop</a></li>
                 <li><a href="user_about.html">About</a></li>
                 <li><h3> Hello,<?=$_SESSION["full_name"]?> </h3></li>
+                <li><a href="EditInfo.php?ID=<?=$_SESSION["ID"]?>" >Edit account</a></li>
                 <li> <form action="logout.php"><Button> Log out</Button> </form></li>
                 <li><a href="cart.php" class="shopping_bag"><img src="images/shopping_bag_FILL0_wght400_GRAD0_opsz48.png" alt=""></a></li>
             </ul>
