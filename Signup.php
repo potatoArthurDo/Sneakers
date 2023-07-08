@@ -65,6 +65,7 @@
                     <input type="file" name="image" id="image" placeholder="Choose Avatar" >
                 </div>
                 
+                <p><u>Agree with terms and conditions</u></p>
                 <div class="check_box">
                 	<input type="checkbox" id="agree" value="1" onclick="CheckBox();">
                     <label for="agree">I agree</label>

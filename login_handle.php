@@ -5,10 +5,10 @@ if(isset($_REQUEST["b1"]) == FALSE)
     die("<h3> Chưa nhập form </h3>");
 
 $email = $_REQUEST["email"];
-$password= $_REQUEST["password"];
+$password= md5($_REQUEST["password"]);
 
 $ketqua = CheckLogin($email,$password);
-if($email == "aa@gmail.com" && $password == "456789")
+if($email == "aa@gmail.com" && $password == md5("456789"))
 {
     $_SESSION["logined"] = "admin";
     $_SESSION["full_name"]=$ketqua["full_name"];

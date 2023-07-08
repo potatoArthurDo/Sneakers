@@ -54,7 +54,7 @@ require("Login_confirmed.php");
                         <a href="admin_edit_product.php?ID=<?=$row["ID"]?>" >Edit</a>
                     </div>
                     <div>
-                    <a href="admin_delete_product.php?ID=<?=$row["ID"]?>" >Delete</a>
+                    <a href="admin_delete_product.php?ID=<?=$row["ID"]?>" onclick="return confirm('Are you sure ?')" >Delete</a>
                     </div>
                 </div>
             </div>

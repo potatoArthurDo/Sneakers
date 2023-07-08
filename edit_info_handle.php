@@ -6,7 +6,7 @@ if(isset($_REQUEST["b1"]) ==FALSE)
     die("<h3> Chưa nhập form </h3>");
 $ID = $_REQUEST["ID"];
 $full_name = $_REQUEST["fullname"];
-$password = $_REQUEST["password"];
+$password = md5($_REQUEST["password"]);
 $dob = $_REQUEST["dob"];
 $email = $_REQUEST["email"];
 $phone = $_REQUEST["phone"];

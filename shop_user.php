@@ -43,7 +43,7 @@ require("Login_confirmed.php");
             <div class="des">
                 <span><?=$row["brand_name"]?></span>
                 <h4><?=$row["name"]?></h4>
-                <h5><?=$row["price"]?></h5>
+                <h5>$<?=$row["price"]?></h5>
                 <div>
                     <a href="product.php?ID=<?=$row["ID"]?>" class="add"><img src="images/add_circle_FILL0_wght400_GRAD0_opsz48.png" alt=""></a>
                 </div>
