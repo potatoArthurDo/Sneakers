@@ -6,14 +6,14 @@ if(isset($_POST["add_to_cart"]) ) {
     $row = getProduct($ID);
     if(isset($_SESSION["shoping_cart"]))
     {
-        $item_array_id = array_column($_SESSION["shoping_cart"], "item_id");
-        if(in_array($ID, $item_array_id))
-        {
-            echo '<script>alert("Item Already Added")
-            window.location.href="product.php"</script>';
-            
-        }
-        else {
+        //$item_array_id = array_column($_SESSION["shoping_cart"], "item_id");
+        //if(in_array($ID, $item_array_id))
+        //{
+        //    echo '<script>alert("Item Already Added")
+        //    window.location.href="product.php"</script>';
+        //    
+        //}
+        //else {
             $count = count(($_SESSION["shoping_cart"]));
             $item_array = array(
                 "item_id"           =>$row["ID"],
@@ -27,7 +27,7 @@ if(isset($_POST["add_to_cart"]) ) {
             echo '<script>alert("Item Added")
             window.location.href="cart.php"</script>';
             
-        }
+        // }
         }
     else{
         $item_array = array(
