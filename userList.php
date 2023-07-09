@@ -8,17 +8,17 @@
 <body>
     <h1 style="text-align: center">Users</h1>
     <p><a href="Signup.php">Add User</a></p>
-    <table width="1009" align="center" cellpadding ="0" cellspacing="0">
+    <table width="1500" align="center" cellpadding ="0" cellspacing="0">
         <tr>
-            <td width="87">ID</td>
-            <td width="212">FULLNAME</td>
-            <td width="212">PASSWORD</td>
-            <td width="200">DATE OF BIRTH</td>
-            <td width="250">EMAIL</td>
-            <td width="150">PHONE</td>
-            <td width="165">GENDER</td>
-            <td width="212">ADDRESS</td>
-            <td width="209">IMAGE</td>
+            <td width="100">ID</td>
+            <td width="300">FULLNAME</td>
+            <td width="400">PASSWORD</td>
+            <td width="300">DATE OF BIRTH</td>
+            <td width="300">EMAIL</td>
+            <td width="200">PHONE</td>
+            <td width="150">GENDER</td>
+            <td width="500">ADDRESS</td>
+            <td width="200">IMAGE</td>
             <td width="172">MODIFY</td>
         </tr>
         <?php
