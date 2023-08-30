@@ -7,25 +7,48 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Edit</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         .add_product {
             display: flex;
-            align-items: center;
-            justify-content: center;
+            justify-content: left;
             font-size: 15px;
+            padding-left: 15px;
             
         }
 
-        .add_product .input {
-            width: 100%;
+        .add_product input {
+            width: 300px;
+            height: 80px;
             font-size: 15px;
-            margin: 80px;
+            margin: 10px;
             padding:5px 10px;
+        }
+
+        .add_product button {
+            width: 80px;
+            height: 30px;
+            background-color: maroon;
+            color: white;
+            margin: 10px;
+            font-size: 15px;
+            border-radius: 20%;
+            border-color: white;
         }
     </style>
 </head>
 <body>
-<h2>Add more products to database.</h2>
+<nav>
+        <div class="header">
+            <a href="admin.php" class="Logo">SUNDAY</a>
+                <ul class="nav">
+                    <li><a href="admin.php">Home</a></li>
+                    <li><h3> Hello,<?=$_SESSION["full_name"]?> </h3></li>
+                    <li> <form action="logout.php"><Button> Log out</Button> </form></li>
+                </ul>
+        </div>
+        </nav>
+<h2>Edit product.</h2>
     <div class="add_product">
         <?php
         if(isset($_REQUEST["ID"]) ==false)
@@ -46,10 +69,10 @@ session_start();
             <input type="file" name="add_p_image" placeholder="Product image" value="<?=$row["image"]?>">
             <br>
             <input type="text" name="add_p_detail" placeholder="Product details" value="<?=$row["detail"]?>">
+            <br>
             <button type="submit" name="b1">Confirm</button>
         </form>
         <br>
     </div>
-    <div> <a href="admin.php">Go back to admin page</a> </div>
 </body>
 </html>

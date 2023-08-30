@@ -25,27 +25,27 @@ require("Login_confirmed.php");
             </ul>
     </div>
     </nav>
-    <section class="p_detail" >
-        <?php
-        $ID = $_REQUEST["ID"];
-        require_once("tb_products.php");
-        $row = getProduct($ID);
-         ?>
-        <form action="cart_handle.php?&ID=<?=$row["ID"]?> " method ="POST">
-        <div class="p_image">
-            <img name="image" src="<?=$row["image"]?> " width="100%">
-        </div>
-        <div class="single_p_detail">
-            <h5 name="brand_name"><?=$row["brand_name"]?></h5>
-            <h4 name="name"><?=$row["name"]?></h4>
-            <h2 name="price">$<?=$row["price"]?></h2>
-            <input name="quantity" type="number" value="1">
-            <button name="add_to_cart" type="submit" >Add To Cart</button>
-            <h4>Product Details</h4>
-            <span><?=$row["detail"]?> </span>
-        </div>
-        </form>
-    </section>
+    <?php
+    $ID = $_REQUEST["ID"];
+    require_once("tb_products.php");
+    $row = getProduct($ID);
+     ?>
+    <form action="cart_handle.php?&ID=<?=$row["ID"]?> " method ="POST">
+        <fieldset class="p_detail" >
+            <div class="p_image">
+                <img name="image" src="<?=$row["image"]?> " width="100%">
+            </div>
+            <div class="single_p_detail">
+                <h5 name="brand_name"><?=$row["brand_name"]?></h5>
+                <h4 name="name"><?=$row["name"]?></h4>
+                <h2 name="price">$<?=$row["price"]?></h2>
+                <input name="quantity" type="number" value="1">
+                <button name="add_to_cart" type="submit" >Add To Cart</button>
+                <h4>Product Details</h4>
+                <span><?=$row["detail"]?> </span>
+            </div>
+        </fieldset>
+    </form>
 
     <section class="product">
         <h2>You May Also Like..</h2>
