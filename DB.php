@@ -2,7 +2,7 @@
 function ConnectDB() {
     $conn = NULL;
     try{
-        $conn = new PDO("mysql:host=localhost;dbname=sneakeruser","root","");
+        $conn = new PDO("mysql:host=localhost;dbname=sneakersuser","root","");
         $conn->query("SET NAMES UTF8");
     }
     catch(PDOException $ex) {
